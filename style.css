@@ -17,6 +17,11 @@ main {
     }
 }
 
+h1,
+p {
+    text-align: center;
+}
+
 svg {
     width: 40px;
 }
@@ -24,12 +29,18 @@ svg {
 .cv, .social-links {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 40px;
 }
 
 .cv a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cv a span {
+    margin-top: 5px;
 }
 
 .github-logo {
