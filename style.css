@@ -17,10 +17,29 @@ main {
     }
 }
 
+svg {
+    width: 40px;
+}
+
+.cv, .social-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.cv a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .github-logo {
     width: 100px;
 }
 
 .linkedin-logo {
     width: 120px;
+}
+
+.email {
+    font-weight: bold;
 }
