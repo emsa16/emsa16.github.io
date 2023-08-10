@@ -22,7 +22,7 @@ body {
 h1,
 h2,
 h3,
-p {
+.center {
     text-align: center;
 }
 
@@ -34,6 +34,12 @@ h3 {
 
 section {
     margin-top: 4rem;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 450px;
+    text-align: justify;
 }
 
 .icon-group {
