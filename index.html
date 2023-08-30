@@ -24,6 +24,7 @@
             <h2>Serverless chat</h2>
             <p class="center"><a href="https://emilsandberg.com/serverless-chat-simple-client/">Chat application</a></p>    
             <p>Very simple chat application, using vanilla HTML/JS/CSS on the frontend and serverless technologies on the backend, more specifically Netlify and Ably.</p>
+            <p>This was originally a school project, for which I had a Websocket server running. To reduce maintenance costs, I started looking into serverless options and decided to try out Ably for a serverless Websocket alternative. This application does not provide a true duplex Websocket channel though, only the receiving of messages happens through the socket. When sending a message, the message is first passed through a serverless function on Netlify, which performs validation, database lookup and prepares the message to be broadcast, which unfortunately loses some of the realtime benefits of Websocket. All of this logic could be done on the client in order to achieve a full-duplex communication but that would leave the application open to abuse, as all of the validation can be easily bypassed on the client. I wished there was a way to add this kind of logic in the Ably service directly, but it does not seem to be possible; the only thing that is exposed is an API.</p>
         </section>
 
         <section>
