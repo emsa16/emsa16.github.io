@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <canvas id="sketch"></canvas>
+
     <header>
       <h1>
         Emil Sandberg <br />
@@ -210,5 +212,37 @@
         </p>
       </section>
     </aside>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+    <script>
+      const xScale = 0.015;
+      const yScale = 0.02;
+      const gap = 21;
+      let tz = 0;
+
+      function setup() {
+        createCanvas(
+          document.body.clientWidth,
+          document.body.clientHeight,
+          document.getElementById("sketch")
+        );
+      }
+
+      function draw() {
+        background(255);
+        noStroke();
+        fill(0);
+
+        for (let x = gap / 2; x < width; x += gap) {
+          for (let y = gap / 2; y < height; y += gap) {
+            let noiseValue = noise(x * xScale, y * yScale, tz);
+            let diameter = noiseValue * gap;
+            circle(x, y, diameter);
+          }
+        }
+
+        tz += 0.05;
+      }
+    </script>
   </body>
 </html>

@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-color: aliceblue;
+  background-color: #f0f8fff7;
   box-sizing: border-box;
 }
 
@@ -10,6 +10,11 @@ body {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+canvas {
+  position: absolute;
+  z-index: -2;
 }
 
 header,
