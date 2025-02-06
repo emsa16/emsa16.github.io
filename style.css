@@ -1,102 +1,105 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    background-color: aliceblue;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: aliceblue;
+  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 header,
 main,
 aside {
-    padding-left: 2em;
-    padding-right: 2em;
-    width: 100%;
-    background-color: white;
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+  background-color: white;
 }
-  
+
 @media screen and (min-width: 800px) {
-    header,
-    main,
-    aside {
-        margin: 0 auto;
-        width: 800px;
-    }
+  header,
+  main,
+  aside {
+    margin: 0 auto;
+    width: 800px;
+  }
 }
 
 header {
-    padding-top: 0.5em;   
+  padding-top: 0.5em;
 }
 
-main, aside {
-    padding-top: 2em;
-    padding-bottom: 0.5em;
+main,
+aside {
+  padding-top: 2em;
+  padding-bottom: 0.5em;
 }
 
 h1,
 h2,
 h3,
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 h1,
 h2,
 h3 {
-    font-family: "Arial", sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
 h1 {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 h2 {
-    font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 section {
-    margin-top: 4em;
+  margin-top: 4em;
 }
 
 aside section:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 main > * {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 450px;
-    text-align: justify;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 450px;
+  text-align: justify;
 }
 
 .icon-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .icon-group a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cv-icon {
-    width: 40px;
+  width: 40px;
 }
 
 .icon-group a span {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 #github-logo {
-    width: 100px;
+  width: 100px;
 }
 
 #linkedin-logo {
-    width: 120px;
+  width: 120px;
 }
