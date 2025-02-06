@@ -1,81 +1,214 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-<head>
+  <head>
     <title>Emil Sandberg Portfolio</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Emil Sandberg <br /> Web Development Portfolio</h1>
+      <h1>
+        Emil Sandberg <br />
+        Web Development Portfolio
+      </h1>
     </header>
 
     <main>
-        <div class="intro">
-            <p>This website is a constantly expanding collection of coding projects that I have done and am in control to showcase. It is a portfolio of my skills and experience, as well as a playground, an exploration of new things that I learn.</p>
-            <p>All projects use Github Pages to host the static files and serverless technologies, primarily Netlify, for backend functionality. Thanks to this, the entire portfolio is deployed with no charges. The source code for all projects is available on <a href="https://github.com/emsa16">Github</a>.</p>
-        </div>
+      <div class="intro">
+        <p>
+          This website is a constantly expanding collection of coding projects
+          that I have done and am in control to showcase. It is a portfolio of
+          my skills and experience, as well as a playground, an exploration of
+          new things that I learn.
+        </p>
+        <p>
+          All projects use Github Pages to host the static files and serverless
+          technologies, primarily Netlify, for backend functionality. Thanks to
+          this, the entire portfolio is deployed with no charges. The source
+          code for all projects is available on
+          <a href="https://github.com/emsa16">Github</a>.
+        </p>
+      </div>
 
-        <section>
-            <h2>Serverless chat</h2>
-            <p class="center"><a href="https://emilsandberg.com/serverless-chat-simple-client/">Chat application</a></p>    
-            <p>Very simple chat application, using vanilla HTML/JS/CSS on the frontend and serverless technologies on the backend, more specifically Netlify and Ably.</p>
-            <p>This was originally a school project, for which I had a Websocket server running. To reduce maintenance costs, I started looking into serverless options and decided to try out Ably for a serverless Websocket alternative. This application does not provide a true duplex Websocket channel though, only the receiving of messages happens through the socket. When sending a message, the message is first passed through a serverless function on Netlify, which performs validation, database lookup and prepares the message to be broadcast, which unfortunately loses some of the realtime benefits of Websocket. All of this logic could be done on the client in order to achieve a full-duplex communication but that would leave the application open to abuse, as all of the validation can be easily bypassed on the client. I wished there was a way to add this kind of logic in the Ably service directly, but it does not seem to be possible; the only thing that is exposed is an API.</p>
-        </section>
+      <section>
+        <h2>Serverless chat</h2>
+        <p class="center">
+          <a href="https://emilsandberg.com/serverless-chat-simple-client/"
+            >Chat application</a
+          >
+        </p>
+        <p>
+          Very simple chat application, using vanilla HTML/JS/CSS on the
+          frontend and serverless technologies on the backend, more specifically
+          Netlify and Ably.
+        </p>
+        <p>
+          This was originally a school project, for which I had a Websocket
+          server running. To reduce maintenance costs, I started looking into
+          serverless options and decided to try out Ably for a serverless
+          Websocket alternative. This application does not provide a true duplex
+          Websocket channel though, only the receiving of messages happens
+          through the socket. When sending a message, the message is first
+          passed through a serverless function on Netlify, which performs
+          validation, database lookup and prepares the message to be broadcast,
+          which unfortunately loses some of the realtime benefits of Websocket.
+          All of this logic could be done on the client in order to achieve a
+          full-duplex communication but that would leave the application open to
+          abuse, as all of the validation can be easily bypassed on the client.
+          I wished there was a way to add this kind of logic in the Ably service
+          directly, but it does not seem to be possible; the only thing that is
+          exposed is an API.
+        </p>
+      </section>
 
-        <section>
-            <h2>Web accessibility showcase</h2>
-            <p class="center"><a href="https://emilsandberg.com/a11y-showcase/">Web accessibility showcase</a></p>                    
-            <p>A collection of thoughts and demos of some accessibility concepts and techniques that I have learned. This is a constant work in progress to which I will add more complex examples, in particular regarding accessibility in JavaScript applications.</p>
-        </section>
+      <section>
+        <h2>Web accessibility showcase</h2>
+        <p class="center">
+          <a href="https://emilsandberg.com/a11y-showcase/"
+            >Web accessibility showcase</a
+          >
+        </p>
+        <p>
+          A collection of thoughts and demos of some accessibility concepts and
+          techniques that I have learned. This is a constant work in progress to
+          which I will add more complex examples, in particular regarding
+          accessibility in JavaScript applications.
+        </p>
+      </section>
 
-        <section>
-            <h2>Korpkvädet - Hobby project website</h2>
-            <p class="center"><a href="https://korpkvadet.fi/">Korpkvädet project website</a></p>                    
-            <p>A website in Swedish for a LARP (live role-playing game) project I was involved in, one of my tasks being to setup the project website. The website is pretty straightforward, built with Wordpress, to allow for other team members to easily add content, and using Airtable to store participant registration data. The work consisted mainly of implementing the layout and structure and navigation, then styling according to specifications, and adding plugins and tweaking functionality for things like sitemap, search, changelog, table of contents, dynamic registration form (not available anymore as registration has closed) and management of registration data (storing it in Airtable).</p>
-            <p>Unfortunately, the code for this project is quite messy, with secrets not being managed in a way that would enable me to put the code up on Github in a public repo.</p>
-        </section>
+      <section>
+        <h2>Korpkvädet - Hobby project website</h2>
+        <p class="center">
+          <a href="https://korpkvadet.fi/">Korpkvädet project website</a>
+        </p>
+        <p>
+          A website in Swedish for a LARP (live role-playing game) project I was
+          involved in, one of my tasks being to setup the project website. The
+          website is pretty straightforward, built with Wordpress, to allow for
+          other team members to easily add content, and using Airtable to store
+          participant registration data. The work consisted mainly of
+          implementing the layout and structure and navigation, then styling
+          according to specifications, and adding plugins and tweaking
+          functionality for things like sitemap, search, changelog, table of
+          contents, dynamic registration form (not available anymore as
+          registration has closed) and management of registration data (storing
+          it in Airtable).
+        </p>
+        <p>
+          Unfortunately, the code for this project is quite messy, with secrets
+          not being managed in a way that would enable me to put the code up on
+          Github in a public repo.
+        </p>
+      </section>
 
-        <section>
-            <h2>Creative Coding on the Web in p5.js (Bachelor's thesis)</h2>
-            <p class="center"><a href="https://urn.kb.se/resolve?urn=urn:nbn:se:bth-17941">Bachelor's thesis</a></p>
-            <p>My bachelor's thesis at Blekinge Institute of Technology in Sweden. The topic of the thesis is the field of creative coding in general and the JavaScript library p5.js in particular. It describes the library and investigates its use cases and how the web can be used as a creative platform.</p>
-        </section>
+      <section>
+        <h2>Creative Coding on the Web in p5.js (Bachelor's thesis)</h2>
+        <p class="center">
+          <a href="https://urn.kb.se/resolve?urn=urn:nbn:se:bth-17941"
+            >Bachelor's thesis</a
+          >
+        </p>
+        <p>
+          My bachelor's thesis at Blekinge Institute of Technology in Sweden.
+          The topic of the thesis is the field of creative coding in general and
+          the JavaScript library p5.js in particular. It describes the library
+          and investigates its use cases and how the web can be used as a
+          creative platform.
+        </p>
+      </section>
     </main>
 
     <aside>
-        <section>
-            <h2>Curriculum Vitae</h2>
-            <div class="icon-group">
-                <div><a href="CV_Sandberg_Emil_EN.pdf"><svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="cv-icon-english"><title id="cv-icon-english">PDF file</title><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"/></svg><span>CV (English)</span></a></div>
-                <div><a href="CV_Sandberg_Emil_FR.pdf"><svg class="cv-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="cv-icon-french"><title id="cv-icon-french">PDF file</title><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"/></svg><span>CV (Français)</span></a></div>
-            </div>
-        </section>
+      <section>
+        <h2>Curriculum Vitae</h2>
+        <div class="icon-group">
+          <div>
+            <a href="CV_Sandberg_Emil_EN.pdf"
+              ><svg
+                class="cv-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                role="img"
+                aria-labelledby="cv-icon-english"
+              >
+                <title id="cv-icon-english">PDF file</title>
+                <path
+                  d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"
+                />
+              </svg>
+              <span>CV (English)</span></a
+            >
+          </div>
+          <div>
+            <a href="CV_Sandberg_Emil_FR.pdf"
+              ><svg
+                class="cv-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                role="img"
+                aria-labelledby="cv-icon-french"
+              >
+                <title id="cv-icon-french">PDF file</title>
+                <path
+                  d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V304H176c-35.3 0-64 28.7-64 64V512H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM176 352h32c30.9 0 56 25.1 56 56s-25.1 56-56 56H192v32c0 8.8-7.2 16-16 16s-16-7.2-16-16V448 368c0-8.8 7.2-16 16-16zm32 80c13.3 0 24-10.7 24-24s-10.7-24-24-24H192v48h16zm96-80h32c26.5 0 48 21.5 48 48v64c0 26.5-21.5 48-48 48H304c-8.8 0-16-7.2-16-16V368c0-8.8 7.2-16 16-16zm32 128c8.8 0 16-7.2 16-16V400c0-8.8-7.2-16-16-16H320v96h16zm80-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v32h32c8.8 0 16 7.2 16 16s-7.2 16-16 16H448v48c0 8.8-7.2 16-16 16s-16-7.2-16-16V432 368z"
+                />
+              </svg>
+              <span>CV (Français)</span></a
+            >
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <h2>Social links</h2>
-            <div class="icon-group">
-                <div><a href="https://github.com/emsa16"><img id="github-logo" src="GitHub_Logo.png" alt="Github" /><span>Github profile</span></a></div>
-                <div><a href="https://www.linkedin.com/in/emilsandberg/"><img id="linkedin-logo" src="LinkedIn-Blue-40-Γäó@2x.png" alt="LinkedIn" /><span>LinkedIn profile</span></a></div>
-            </div>
-        </section>
+      <section>
+        <h2>Social links</h2>
+        <div class="icon-group">
+          <div>
+            <a href="https://github.com/emsa16"
+              ><img id="github-logo" src="GitHub_Logo.png" alt="Github" /><span
+                >Github profile</span
+              ></a
+            >
+          </div>
+          <div>
+            <a href="https://www.linkedin.com/in/emilsandberg/"
+              ><img
+                id="linkedin-logo"
+                src="LinkedIn-Blue-40-Γäó@2x.png"
+                alt="LinkedIn"
+              /><span>LinkedIn profile</span></a
+            >
+          </div>
+        </div>
+      </section>
 
-        <section>
-            <h2>Other links</h2>
-            <p class="center"><a href="https://emilsandberg.com/blog">My blog</a></p>
-            <p class="center"><a href="https://never-endingstories.org/">Never-Ending Stories - my old theatre company</a></p>
-            <p style="display:none;"><a href="https://emilhietanen.wordpress.com/">My old(!) portfolio/blog</a></p>
-        </section>
+      <section>
+        <h2>Other links</h2>
+        <p class="center">
+          <a href="https://emilsandberg.com/blog">My blog</a>
+        </p>
+        <p class="center">
+          <a href="https://never-endingstories.org/"
+            >Never-Ending Stories - my old theatre company</a
+          >
+        </p>
+        <p style="display: none">
+          <a href="https://emilhietanen.wordpress.com/"
+            >My old(!) portfolio/blog</a
+          >
+        </p>
+      </section>
 
-        <section>
-            <h2>Contact</h2>
-            <p class="center"><a href="mailto:emilalsandberg@gmail.com">Email at emilalsandberg [at] gmail.com</a></p>
-        </section>
+      <section>
+        <h2>Contact</h2>
+        <p class="center">
+          <a href="mailto:emilalsandberg@gmail.com"
+            >Email at emilalsandberg [at] gmail.com</a
+          >
+        </p>
+      </section>
     </aside>
-</body>
-
+  </body>
 </html>
