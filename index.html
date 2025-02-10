@@ -223,8 +223,9 @@
     <script>
       const xScale = 0.015;
       const yScale = 0.02;
-      const gap = 21;
+      const gap = 40;
       let tz = 0;
+      const circles = [];
 
       function setup() {
         createCanvas(
@@ -232,22 +233,27 @@
           document.body.clientHeight,
           document.getElementById("sketch")
         );
+        noStroke();
+        fill(0);
+        frameRate(30);
+
+        for (let x = gap / 2; x < width; x += gap) {
+          for (let y = gap / 2; y < height; y += gap) {
+            circles.push({ x, y });
+          }
+        }
       }
 
       function draw() {
         background(255);
-        noStroke();
-        fill(0);
 
-        for (let x = gap / 2; x < width; x += gap) {
-          for (let y = gap / 2; y < height; y += gap) {
-            let noiseValue = noise(x * xScale, y * yScale, tz);
-            let diameter = noiseValue * gap;
-            circle(x, y, diameter);
-          }
+        for (let { x, y } of circles) {
+          let noiseValue = noise(x * xScale, y * yScale, tz);
+          let diameter = noiseValue * gap;
+          circle(x, y, diameter);
         }
 
-        tz += 0.05;
+        tz += 0.02;
       }
     </script>
   </body>
